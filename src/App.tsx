@@ -1,24 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {useState,useEffect} from "react";
+import "./App.css";
+import { motion } from "framer-motion"
+import Navbar from "./Components/NavigationBar/navbar";
+import Skillmeter from "./Components/SkillMeter/Skillmeter";
 
 function App() {
+  function Cursor(){
+    const [mouseposition, setMouseposition] = useState({
+        x:0,
+        y:0
+    });
+    useEffect(() => {
+        const mouseMove = (e:any) => {
+            setMouseposition({
+                x: e.clientX,
+                y: e.clientY
+            })
+        }
+        window.addEventListener("mousemove", mouseMove);
+        return () => {
+            window.removeEventListener("mousemove", mouseMove);
+        }
+    }, [])
+
+    const varients = {
+        default: {
+            x: mouseposition.x -17,
+            y: mouseposition.y -16
+        }
+    }
+    return(
+        <motion.div
+            className="cursor"
+            variants={varients}
+            animate="default"
+        ><p className="letter">S</p></motion.div>
+    );
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{marginBottom:"50px"}}>
+      <Navbar/>
+      <Cursor/>
+      <div className="main-home-div" style={{marginTop:"100px"}}>
+        <div className="main-page-skeleton" style={{textAlign: "center"}}>
+            <div className="About-div">
+                <h2>About</h2>
+                <p style={{fontWeight: "bold"}}>The fact that one wouldn't read 3 paragraphs about a person has been taken to considertaion in the design on this website.
+                    <br/>So here is everything you should know about me instead of a long paragraph
+                </p>
+            </div>
+        </div>
+      </div>
     </div>
   );
 }

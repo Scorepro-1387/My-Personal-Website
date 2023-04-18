@@ -1,0 +1,98 @@
+.main-nav-div{
+    padding-left: 20px;
+    background-color: #222222;
+    color: #F3EFE0;
+    padding-top: 0px;
+    margin-top: -100px;
+    padding-bottom: 0px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+.maintitleimage{
+    width: 50px;
+    height: 50px;
+    margin-top: 9px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+.main-nav-div .nav-skeleton{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-right: -120px;
+}
+.main-nav-div .nav-skeleton .main-nav-titl{
+    display: flex;
+    margin-left: -600px;
+    transition: 0.5s;
+}
+.main-nav-div .nav-skeleton .nav-title{
+    display: flex;
+}
+.main-nav-div .nav-skeleton .nav-title .seyed{
+    margin: 0px 15px 0px 15px;
+    color: #f3efe04e;
+}
+.main-nav-div .nav-skeleton .nav-title .salar{
+    margin: 0px 0px 0px 0px;
+}
+.main-nav-div .nav-skeleton .nav-buttons{
+    margin-left: 600px;
+    display: flex;
+    position: fixed;
+    transition: 0.5s;
+}
+.main-nav-div .nav-skeleton .nav-buttons div{
+    margin-right: 20px;
+    margin-top: 3px;
+}
+
+.main-nav-div .nav-skeleton .nav-title span{
+    transition: 0.5s;
+}
+
+.main-nav-div .nav-skeleton .nav-title span:hover{
+    letter-spacing: 3px;
+    transition: 0.5s;
+}
+@media screen and (max-width: 1189px) {
+    .main-nav-div .nav-skeleton .main-nav-titl{
+        margin-left: -400px;
+    }
+    .main-nav-div .nav-skeleton .nav-buttons{
+        margin-left: 400px;
+    }
+}
+@media screen and (max-width: 769px) {
+    .desktopicon{
+        display: none;
+    }
+    .main-nav-div .nav-skeleton .nav-title p{
+        display: none;
+    }
+    .main-nav-div .nav-skeleton .nav-title span{
+        margin-left: -10px;
+    }
+    .main-nav-div .nav-skeleton .nav-buttons{
+        margin: 0px;
+        right: 0;
+    }
+    .main-nav-div .nav-skeleton .main-nav-titl{
+        margin: 0px;
+
+    }
+    .maintitleimage{
+        margin-top: 7px;
+        margin-right: 20px;
+        margin-bottom: 7px;
+    }
+    .main-nav-div .nav-skeleton{
+        margin-left: -140px;
+    }
+}
