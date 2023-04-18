@@ -45,9 +45,6 @@ function App() {
         <div className="main-page-skeleton" style={{textAlign: "center"}}>
             <div className="About-div">
                 <h2>About</h2>
-                <p style={{fontWeight: "bold"}}>The fact that one wouldn't read 3 paragraphs about a person has been taken to considertaion in the design on this website.
-                    <br/>So here is everything you should know about me instead of a long paragraph
-                </p>
             </div>
         </div>
       </div>
