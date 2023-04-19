@@ -45,6 +45,7 @@ function App() {
         <div className="main-page-skeleton" style={{textAlign: "center"}}>
             <div className="About-div">
                 <h2>About</h2>
+              <p>Test about?</p>
             </div>
         </div>
       </div>
